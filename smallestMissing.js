@@ -35,8 +35,10 @@ const smallestMissing = (arr) => {
 }
 
 
-console.log('3 == ',smallestMissing([0, 1, 2, 6, 9, 11, 15])) //3
-console.log('0 == ',smallestMissing([1, 2, 3, 4, 6, 9, 11, 15])) //0
-console.log('5 == ',smallestMissing([0,1, 2, 3, 4, 6, 9, 11, 15])) //5
-console.log('7 == ',smallestMissing([0, 1, 2, 3, 4, 5, 6])) // 7
-console.log('0 == ',smallestMissing([])) // 0
+// console.log('3 == ',smallestMissing([0, 1, 2, 6, 9, 11, 15])) //3
+// console.log('0 == ',smallestMissing([1, 2, 3, 4, 6, 9, 11, 15])) //0
+// console.log('5 == ',smallestMissing([0,1, 2, 3, 4, 6, 9, 11, 15])) //5
+// console.log('7 == ',smallestMissing([0, 1, 2, 3, 4, 5, 6])) // 7
+// console.log('0 == ',smallestMissing([])) // 0
+
+
