@@ -1,0 +1,19 @@
+function minimumSwaps(arr) {
+    let swap = 0;
+    for (let i = 0; i < arr.length; i++) { 
+            while (i+1 !== arr[i]) {
+                    let temp = arr[arr[i] - 1];
+                    console.log('>>>>arr[arr[i] - 1]',arr[arr[i] - 1], 'arr[i]', arr[i])
+                    arr[arr[i] - 1] = arr[i]
+                    console.log('arr[arr[i] - 1]',arr[arr[i] - 1], 'arr[i]', arr[i])
+
+                    console.log('>>>arr[i]',arr[i],  'temp',temp)
+                    arr[i] = temp;
+                    console.log('arr[i]',arr[i],  'temp',temp)
+                    swap += 1;
+            }
+    }
+    return swap;
+}
+
+console.log(minimumSwaps([4,3,1,2]))
