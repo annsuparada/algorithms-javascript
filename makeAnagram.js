@@ -11,7 +11,7 @@ function makeAnagram(a, b) {
         if (aTrack[b[i]] > 0){
             aTrack[b[i]] -= 1
             counter += 2
-        }
+        }  
     }
     result = (a.length + b.length) - counter
 
