@@ -56,4 +56,6 @@ function isValid(s) {
 }
 
 
-
+console.log(isValid('aabbcd')) // NO
+console.log(isValid('aabbccddeefghi')) // NO
+console.log(isValid('abcdefghhgfedecba')) // YES
