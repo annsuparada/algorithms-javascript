@@ -1,3 +1,4 @@
+const fs = require('fs');
 // Techsico Programming Challenge
 
 // Given a set of strings find all substrings of 4 or more characters
@@ -32,6 +33,10 @@
 //my solution
     // runtime complexity = O(n^2)
     // space complexity = O(n^2)
+
+// const stringSet = JSON.parse(fs.readFileSync("./stringSet.json" ));
+// const mySet = new Set(stringSet)
+
 
 //given input
 let setOfStr = new Set(["abcdefg", "abcdthr", "abcdtef"]);
