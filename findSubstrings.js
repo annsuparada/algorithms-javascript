@@ -1,24 +1,3 @@
-const fs = require('fs');
-
-let input = []
-const getRandomString = (length) => {
-    let randomChars = 'abcdefghijklmnopqrstuvwxyz';
-    let j = 0;
-    while (j < length){
-        let result = '';
-        for ( let i = 0; i < 5; i++ ) {
-            result += randomChars.charAt(Math.floor(Math.random() * randomChars.length));
-            if (result.length >= 4) {
-                input.push(result)
-            }
-        }
-        j++
-    }
-    return input
-}
-    
-
-
 let setOfStr = new Set(["abcdefg", "abcdthr", "abcdtef"]);
 
 const findSubstrings = (setOfStr) => {
@@ -71,11 +50,5 @@ const findSubstrings = (setOfStr) => {
     return output
 }
 
-console.log(findSubstrings(setOfStr))
-// console.log(getRandomString(10000))
+// console.log(findSubstrings(setOfStr))
 
-// fs.writeFileSync("./stringSet.json", JSON.stringify(getRandomString(10000), null, 4))
-
-// const stringSet = JSON.parse(fs.readFileSync("./stringSet.json" ));
-// const mySet = new Set(stringSet)
-// console.log(mySet)
