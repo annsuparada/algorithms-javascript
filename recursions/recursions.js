@@ -7,7 +7,7 @@ function power(base, exponent) {
 }
 
 // console.log("test1", power(2, 0)); //1
-// console.log("test1", power(2, 2)); //2
+// console.log("test1", power(2, 2)); //4
 // console.log("test1", power(2, 4)); //16
 
 function factorial(num) {
@@ -52,5 +52,7 @@ function fib(num) {
   else return fib(num - 1) + fib(num - 2);
 }
 
-console.log(fib(4)); //3
-console.log(fib(10)); //55
+// console.log(fib(4)); //3
+// console.log(fib(10)); //55
+
+console.log(Math.pow(6, 2), Math.pow(8, 2));
