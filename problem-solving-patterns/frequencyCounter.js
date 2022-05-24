@@ -10,7 +10,6 @@ function anagram(str1, str2) {
   }
 
   for (let i = 0; i < str2.length; i++) {
-    // console.log(lookup);
     let letter = str2[i];
     if (!lookup[letter]) {
       return false;
@@ -133,5 +132,38 @@ function camelcase(s) {
   return words;
 }
 
-console.log(camelcase('oneTwoThree')) // 3
-console.log(camelcase('saveChangesInTheEditor')) // 5
+// console.log(camelcase('oneTwoThree')) // 3
+// console.log(camelcase('saveChangesInTheEditor')) // 5
+
+
+function caesarCipher(s, k) {
+  const alphabet = "abcdefghijklmnopqrstuvwxyz";
+  let alphabetObj = {};
+  let encrypted = "";
+
+  for (let i = 0; i < alphabet.length; i++) {
+      let rotationIndex = (i + 1) + s;
+      if (rotationIndex > alphabet.length) {
+          alphabetObj[alphabet[i]] = alphabet[rotationIndex - alphabet.length - 1];
+      } else {
+          alphabetObj[alphabet[i]] = alphabet[i+s];
+      };
+  };
+  console.log(alphabetObj)
+  for (let i = 0; i < k.length; i++) {
+      if (alphabetObj.hasOwnProperty(k[i].toLowerCase())) {
+          if (k[i] === k[i].toUpperCase()) {
+            encrypted += alphabetObj[k[i].toLowerCase()].toUpperCase();
+          } else {
+            encrypted += alphabetObj[k[i]];
+          }
+      } else {
+          encrypted += k[i];
+      }
+  };
+  
+  return encrypted;
+};
+
+console.log(caesarCipher(4, 'Hello_World!'))
+console.log(caesarCipher(2, 'middle-Outz')) //okffng-Qwvb
