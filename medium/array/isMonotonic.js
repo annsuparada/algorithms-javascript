@@ -8,7 +8,6 @@ function isMonotonic1(array) {
     let j = idx + 1;
     if (array.length <= 2) return true;
     if (firstIdx > secondIdx && firstIdx !== secondIdx) {
-      console.log('FIRST');
       while (j < array.length) {
         if (array[j] > array[i]) {
           return false;
@@ -18,7 +17,6 @@ function isMonotonic1(array) {
       }
       return true;
     } else if (firstIdx < secondIdx && firstIdx !== secondIdx) {
-      console.log('second');
       while (j < array.length) {
         if (array[i] > array[j]) {
           return false;
